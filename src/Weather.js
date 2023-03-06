@@ -5,6 +5,7 @@ import "./Weather.css";
 export default function () {
   let [city, setCity] = useState("Helsinki");
   let [temperature, setTemperature] = useState(-3);
+  let [description, setDescription] = useState("broken clouds");
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -37,13 +38,29 @@ export default function () {
     </div>
   );
 
+  let overview = (
+    <div className="overview">
+      <h1>{city}</h1>
+      <ul>
+        <li>Sunday, 20:23</li>
+        <li>{description}</li>
+      </ul>
+    </div>
+  );
+
   function updateCity(event) {
     setCity(event.target.value);
   }
 
   function showWeather(response) {
     setTemperature(response.data.main.temp);
+    setDescription(response.data.weather[0].description);
   }
 
-  return <div>{form}</div>;
+  return (
+    <div>
+      {form}
+      {overview}
+    </div>
+  );
 }
