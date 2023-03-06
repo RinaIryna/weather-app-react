@@ -23,3 +23,19 @@ li {
   padding: 0;
   font-size: 20px;
 }
+
+.weather strong {
+  font-size: 64px;
+  line-height: 1;
+}
+
+.weather .units {
+  position: relative;
+  font-size: 18px;
+  top: -34px;
+}
+
+.weather a {
+  text-decoration: none;
+  padding-top: 100px;
+}
