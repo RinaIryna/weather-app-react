@@ -81,6 +81,70 @@ export default function Weather() {
     </div>
   );
 
+  let forecast = (
+    <div className="forecast">
+      <div className="row">
+        <div className="col-2 days">Mon</div>
+        <div className="col-2 days">Tue</div>
+        <div className="col-2 days">Wed</div>
+        <div className="col-2 days">Thu</div>
+        <div className="col-2 days">Fri</div>
+      </div>
+
+      <div className="row week">
+        <div className="col-sm-2 weather-icon">
+          <ReactAnimatedWeather
+            icon="CLOUDY"
+            color="black"
+            size={60}
+            animate={true}
+          />
+          <p className="temperature">-7°C</p>
+        </div>
+
+        <div className="col-sm-2 ">
+          <ReactAnimatedWeather
+            icon="SNOW"
+            color="black"
+            size={60}
+            animate={true}
+          />
+          <p className="temperature">-3°C</p>
+        </div>
+
+        <div className="col-sm-2 ">
+          <ReactAnimatedWeather
+            icon="SNOW"
+            color="black"
+            size={60}
+            animate={true}
+          />
+          <p className="temperature">-6°C</p>
+        </div>
+
+        <div className="col-sm-2 ">
+          <ReactAnimatedWeather
+            icon="CLEAR_NIGHT"
+            color="black"
+            size={60}
+            animate={true}
+          />
+          <p className="temperature">-7°C</p>
+        </div>
+
+        <div className="col-sm-2 ">
+          <ReactAnimatedWeather
+            icon="CLOUDY"
+            color="black"
+            size={60}
+            animate={true}
+          />
+          <p className="temperature">-1°C</p>
+        </div>
+      </div>
+    </div>
+  );
+
   function updateCity(event) {
     setCity(event.target.value);
   }
@@ -97,6 +161,7 @@ export default function Weather() {
       {form}
       {overview}
       {weather}
+      {forecast}
     </div>
   );
 }

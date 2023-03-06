@@ -1,15 +1,5 @@
-.weather-app-wrapper {
-  margin: 20px auto;
-  max-width: 600px;
-}
-
-.weather-app {
-  padding: 20px 16px 24px;
-  border: 1px solid #878787;
-  border-radius: 10px;
-}
-.overview {
-  padding-top: 20px;
+h1 {
+  font-weight: bold;
 }
 
 ul {
@@ -22,6 +12,24 @@ li {
   margin: 0;
   padding: 0;
   font-size: 20px;
+}
+
+li:first-letter {
+  text-transform: capitalize;
+}
+
+.weather-app-wrapper {
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.weather-app {
+  padding: 20px 16px 24px;
+  border: 1px solid #878787;
+  border-radius: 10px;
+}
+.overview {
+  padding-top: 20px;
 }
 
 .weather strong {
@@ -38,4 +46,21 @@ li {
 .weather a {
   text-decoration: none;
   padding-top: 100px;
+}
+
+.forecast {
+  padding-top: 30px;
+}
+
+.days {
+  text-align: center;
+  font-size: 16px;
+}
+
+.temperature {
+  text-align: center;
+}
+
+.weather-icon {
+  margin-right: 7px;
 }
